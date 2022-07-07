@@ -1,0 +1,206 @@
+{
+  "store.home": {
+    "blocks": [
+      "responsive-layout.desktop#desktop",
+      "responsive-layout.mobile#mobile",
+      "stack-layout#cta",
+      "flex-layout.row",
+      "slider-layout#home",
+      "tab-layout#home",
+      "modal-trigger#first",
+      "list-context.product-list",
+      "rich-text",
+      "info-card#vintage",
+      "info-card#clearance"
+    ]
+  },
+  "responsive-layout.desktop#desktop": {
+    "children": ["rich-text#desktop", "image#desktop"]
+  },
+
+  "responsive-layout.mobile#mobile": {
+    "children": ["rich-text#mobile", "image#mobile"]
+  },
+
+  "image#desktop": {
+    "props": {
+      "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Desktop.jpg?q=1",
+      "maxWidth": "100%",
+      "link": {
+        "url": "/small-appliances/coffee-makers"
+      },
+      "alt": "Coffe Makers Collection"
+    }
+  },
+
+  "image#mobile": {
+    "props": {
+      "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Mobile.jpg?q=1",
+      "maxWidth": "100%",
+      "link": {
+        "url": "/small-appliances/coffee-makers"
+      }, 
+      "alt": "Coffe Makers Collection"
+    }
+  },
+
+  "rich-text#desktop": {
+    "props": {
+      "text": "# Your Coffee, Your Way \n ### New Coffee Makers Collection",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER"
+    }
+  },
+
+  "rich-text#mobile": {
+    "props": {
+      "text": "# Your Coffee, Your Away \n ### New Coffee Makers Collection",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER"
+    }
+  }, 
+
+  "stack-layout#cta": {
+    "children": ["image#cta", "link#cta"]
+  },
+
+  "image#cta": {
+    "props": {
+      "blockClass": "cta",
+      "width": "100%",
+      "height": 400,
+      "src": "https://appliancetheme.vtexassets.com/assets/app/src/appliancecat___1b7592b49667c6a89203a0997e06bc87.jpg"
+    }
+  },
+
+  "link#cta": {
+     "props": {
+        "displayMode": "button",
+        "buttonProps": {
+        "variant": "primary",
+        "size": "large"
+      },
+      "href": "/washer",
+      "label": "Check these awesome discounts"
+      }
+  },
+
+  "flex-layout.row": {
+    "children": [ "info-card#rethink", "flex-layout.col" ]
+  },
+
+  "flex-layout.col": {
+    "children": [ "image#eletronics", "image#major-appliance"]
+  },
+
+  "info-card#rethink": {
+    "props": {
+      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/utensilios-cozinha-min.png",
+      "isFullModeStyle": true,
+      "headline": "Time to rethink your kitchen",
+      "callToTheActionText": "Discorver",
+      "textPosition": "center"
+    }
+  },
+
+  "image#eletronics": {
+    "props": {
+      "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/electronics_banner___25d69b49f8224b369375e68513b4d593.png",
+      "maxWith": "100%"
+    }
+  },  
+
+  "image#major-appliance": {
+    "props": {
+      "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/major_appliance_banner___bb10093866a127345ddfbcca3efa5022.png",
+      "maxWidth": "100%"
+    }
+  },
+
+  "modal-trigger#first": {
+    "children": ["rich-text#trigger", "modal-layout#first"]
+  },
+
+  "modal-layout#first": {
+    "children": ["rich-text#hello"]
+  },
+
+  "rich-text#trigger": {
+    "props": {
+      "text": "**CLICK ME**"
+    }
+  },
+
+  "rich-text#hello": {
+    "props": {
+      "text": "Hello"
+    }
+  },
+
+  "list-context.product-list": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout"]
+  },
+
+  "product-summary.shelf": {
+    "children": [
+      "modal-trigger#quickview",
+      "product-summary-name",
+      "product-summary-price"
+    ]
+  },
+
+  "modal-trigger#quickview": {
+    "children": ["product-summary-image", "modal-layout#quickview"]
+  },
+
+  "modal-layout#quickview": {
+    "children": [
+      "product-summary-name",
+      "product-images",
+      "product-summary-sku-selector",
+      "product-summary-quantity",
+      "add-to-cart-button"
+    ] 
+  },
+
+  "rich-text": { 
+    "props": { 
+      "text": "Tech World",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-1",
+      "textColor": "white-025"
+    }
+  },
+
+  "info-card#vintage": {
+    "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "textAlignment": "center",
+      "headline": "Vintage Pink",
+      "subhead": "Give your kitchen a boho style adding vintage apparels.<br>Available until January 2022.",
+      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-rosa-min.png",
+      "callToActionMode": "button",
+      "callToActionText": "Explore",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "vintage"
+    }
+  },
+
+  "info-card#clearance": {
+    "props": {
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "textAlignment": "center",
+      "headline": "Shining Chrome",
+      "subhead": "Give your kitchen a cool style adding warm metallic finishes.<br>Available until January 2022.",
+      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png",
+      "callToActionMode": "link",
+      "callToActionText": "Go to Collection",
+      "callToActionUrl": "/sale/e"
+    }
+  }
+   
+}

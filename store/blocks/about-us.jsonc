@@ -1,0 +1,35 @@
+{
+  "store.custom#about-us": {
+    "blocks": ["flex-layout.row#about-us"]
+  },
+
+  "flex-layout.row#about-us": {
+    "children": ["image#about-us", "flex-layout.col#text-about-us"]
+  },
+
+  "flex-layout.col#text-about-us": {
+    "children": ["rich-text#about-title", "rich-text#about-content"],
+    "props": {
+      "preventVerticalStrech": true
+    }
+  },
+
+  "rich-text#about-title": {
+    "props": {
+      "text": "# About Minimum Theme"
+    }
+  },
+
+  "rich-text#about-content": {
+    "props": {
+      "text": "### This is content about my first store on vtex io"
+    }
+  },
+
+  "image#about-us": {
+    "props": {
+      "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
+      "maxHeight": "600px"
+    }
+  }
+}
